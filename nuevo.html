@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación del Proyecto</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #1e1f20;
+      color: white;
+    }
+    .container {
+      max-width: 700px;
+      margin-top: 2rem;
+    }
+    .form-label, .form-check-label {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-4 text-center">Evaluación de Proyecto</h2>
+    
+    <h4 id="nombreProyecto" class="text-warning text-center"></h4> <!-- Aquí aparece el nombre -->
+
+    <form id="evaluacionForm" action="https://formspree.io/f/xkgryvlv" method="POST">
+      <!-- Aquí se añadirá el input oculto con el nombre del proyecto vía JS -->
+
+      <!-- Campo oculto nombre del proyecto -->
+      <input type="hidden" name="nombre_proyecto" id="nombre_proyecto" value="">
+
+      <!-- Pregunta 1 -->
+      <div class="mb-3">
+        <label class="form-label">¿En qué medida el proyecto se sustenta en un conocimiento profundo del tema y logra establecer alianzas estratégicas que permitan su éxito a largo plazo?</label>
+        <select class="form-select" name="claridad" required>
+          <option value="">Seleccione</option>
+          <option value="El proyecto demuestra un conocimiento profundo del tema, respaldado por alianzas estratégicas sólidas y bien establecidas, que aseguran su éxito a largo plazo.">El proyecto demuestra un conocimiento profundo del tema, respaldado por alianzas estratégicas sólidas y bien establecidas, que aseguran su éxito a largo plazo.</option>
+          <option value="El proyecto muestra un buen conocimiento del tema, apoyado por alianzas útiles y relevantes, aunque hay margen para fortalecerlas.">El proyecto muestra un buen conocimiento del tema, apoyado por alianzas útiles y relevantes, aunque hay margen para fortalecerlas.</option>
+          <option value="Hay una base razonable de conocimiento sobre el tema, con algunas alianzas iniciales que tienen potencial, pero aún requieren desarrollo.">Hay una base razonable de conocimiento sobre el tema, con algunas alianzas iniciales que tienen potencial, pero aún requieren desarrollo.</option>
+          <option value="El conocimiento del tema es limitado; se han identificado algunas alianzas potenciales, pero estas no se han consolidado de manera efectiva.">El conocimiento del tema es limitado; se han identificado algunas alianzas potenciales, pero estas no se han consolidado de manera efectiva.</option>
+        </select>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="mb-3">
+        <label class="form-label">¿En qué medida el proyecto combina una innovación tecnológica significativa y un enfoque interdisciplinario, asegurando la disponibilidad de recursos e insumos necesarios para su implementación efectiva?</label>
+        <select class="form-select" name="innovacion" required>
+          <option value="">Seleccione</option>
+          <option value="El proyecto integra de manera excepcional innovación tecnológica y un enfoque interdisciplinario, con acceso total a recursos y amplias oportunidades de formación.">El proyecto integra de manera excepcional innovación tecnológica y un enfoque interdisciplinario, con acceso total a recursos y amplias oportunidades de formación.</option>
+          <option value="Presenta un nivel sólido de innovación y un enfoque interdisciplinario, con buen acceso a recursos e interesantes oportunidades de formación.">Presenta un nivel sólido de innovación y un enfoque interdisciplinario, con buen acceso a recursos e interesantes oportunidades de formación.</option>
+          <option value="Muestra un nivel aceptable de innovación y algunas conexiones interdisciplinarias, pero con acceso moderado a recursos y oportunidades de formación.">Muestra un nivel aceptable de innovación y algunas conexiones interdisciplinarias, pero con acceso moderado a recursos y oportunidades de formación.</option>
+          <option value="La innovación es limitada y el enfoque interdisciplinario poco desarrollado, con acceso restringido a recursos y escasas oportunidades de formación.">La innovación es limitada y el enfoque interdisciplinario poco desarrollado, con acceso restringido a recursos y escasas oportunidades de formación.</option>
+        </select>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="mb-3">
+        <label class="form-label">¿Qué posibilidades ofrece el proyecto para desarrollar una idea de negocio y comercializarse efectivamente, considerando su capacidad de divulgación y acceso a canales de promoción?</label>
+        <select class="form-select" name="pregunta3" required>
+          <option value="">Seleccione</option>
+          <option value="El proyecto tiene un claro potencial para convertirse en una empresa o servicio comercializable, respaldado por diversos medios alternativos para su divulgación y promoción.">El proyecto tiene un claro potencial para convertirse en una empresa o servicio comercializable, respaldado por diversos medios alternativos para su divulgación y promoción.</option>
+          <option value="Presenta un buen potencial empresarial con algunas oportunidades de comercialización, apoyado por foros y conferencias relevantes.">Presenta un buen potencial empresarial con algunas oportunidades de comercialización, apoyado por foros y conferencias relevantes.</option>
+          <option value="El potencial empresarial es moderado, con limitadas posibilidades de comercialización; sin embargo, está vinculado a redes sociales y grupos interesados en el tema.">El potencial empresarial es moderado, con limitadas posibilidades de comercialización; sin embargo, está vinculado a redes sociales y grupos interesados en el tema.</option>
+          <option value="Las posibilidades de convertirse en una empresa o de ser comercializado son escasas; aunque conoce medios convencionales de divulgación, carece de estrategias claras.">Las posibilidades de convertirse en una empresa o de ser comercializado son escasas; aunque conoce medios convencionales de divulgación, carece de estrategias claras.</option>
+          <option value="No tiene potencial para emprendimiento ni para ser comercializado, y no tiene acceso ni conocimiento de medios de divulgación relevantes.">No tiene potencial para emprendimiento ni para ser comercializado, y no tiene acceso ni conocimiento de medios de divulgación relevantes.</option>
+        </select>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="mb-3">
+        <label class="form-label">¿Qué tan significativo es el impacto del proyecto en la sociedad, la cultura y el desarrollo personal del estudiante, considerando los efectos positivos y negativos que puede generar?</label>
+        <select class="form-select" name="pregunta4" required>
+          <option value="">Seleccione</option>
+          <option value="El proyecto tiene un impacto positivo y significativo en los hábitos, costumbres y cultura de las poblaciones objetivo, promoviendo un crecimiento personal transformador en el estudiante.">El proyecto tiene un impacto positivo y significativo en los hábitos, costumbres y cultura de las poblaciones objetivo, promoviendo un crecimiento personal transformador en el estudiante.</option>
+          <option value="Genera un impacto moderado en las costumbres y cultura de las comunidades involucradas, con algunos vínculos sociales y contribuyendo al desarrollo personal del estudiante.">Genera un impacto moderado en las costumbres y cultura de las comunidades involucradas, con algunos vínculos sociales y contribuyendo al desarrollo personal del estudiante.</option>
+          <option value="Tiene algún impacto cultural y social, pero es limitado; el desarrollo personal del estudiante también es moderado.">Tiene algún impacto cultural y social, pero es limitado; el desarrollo personal del estudiante también es moderado.</option>
+          <option value="Escaso impacto en la cultura o sociedad de las poblaciones objetivo, así como una influencia limitada en el desarrollo personal.">Escaso impacto en la cultura o sociedad de las poblaciones objetivo, así como una influencia limitada en el desarrollo personal.</option>
+          <option value="No tiene ningún impacto positivo en la cultura o sociedad, y no genera crecimiento personal ni mejora de habilidades en el estudiante.">No tiene ningún impacto positivo en la cultura o sociedad, y no genera crecimiento personal ni mejora de habilidades en el estudiante.</option>
+        </select>
+      </div>
+
+      <!-- Observaciones -->
+      <div class="mb-3">
+        <label class="form-label">Observaciones:</label>
+        <textarea class="form-control" name="observaciones" rows="4" placeholder="Escriba aquí sus comentarios..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">Enviar evaluación</button>
+    </form>
+  </div>
+
+  <script>
+    // Obtener el nombre del proyecto desde la URL
+    const params = new URLSearchParams(window.location.search);
+    const proyecto = params.get('proyecto');
+
+    if (proyecto) {
+      // Mostrar el nombre en pantalla
+      document.getElementById("nombreProyecto").innerText = `Proyecto: ${proyecto}`;
+
+      // Insertar como campo oculto en el formulario
+      const hiddenInput = document.createElement("input");
+      hiddenInput.type = "hidden";
+      hiddenInput.name = "nombre_proyecto";
+      hiddenInput.value = proyecto;
+      document.getElementById("evaluacionForm").appendChild(hiddenInput);
+    }
+  </script>
+</body>
+</html>
+
+

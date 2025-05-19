@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias - Universidad Pedagógica Nacional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; }
+    
+    .hero {
+      position: relative;
+      background-image: url("https://cienciaytecnologia.upn.edu.co/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-19-at-9.46.57-AM.jpeg"); /* Actualiza la URL con la nueva imagen */
+      background-size: cover;
+      background-position: center;
+      height: 50vh; /* Ajuste la altura del hero */
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 0 20px;
+    }
+    h1 {
+  padding-bottom: 00px; /* Ajusta según el espaciado que desees */
+  margin-left: 500px; /* Ajusta el valor según lo que necesites */
+  font-size: 70px; /* Aumenta el tamaño del título */
+  text-align: center; /* Alinea el texto a la derecha */
+  font-family: 'Bebas Neue', sans-serif; /* Aplica la fuente Bebas Neue */
+  white-space: nowrap;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+      z-index: 1;
+    }
+
+    .hero-content-left {
+      position: relative;
+      z-index: 2;
+      max-width: 50%;
+    }
+
+    .hero-content-right {
+      position: relative;
+      z-index: 2;
+      max-width: 600%; /* Ajuste del texto a la derecha */
+      padding-left: 20px;
+    }
+
+    .hero-content h1 {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      background-color: #003366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .navbar.custom-dark {
+      background-color: #003366;
+    }
+
+    .service-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card {
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .cta-button {
+      background-color: #003366;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    .navbar.custom-dark {
+      background-color: #003366;
+    }
+
+    .service-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card {
+      border: 1px solid #fff;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
+      margin-right: 8px;
+    }
+
+    .service-card {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  color: white; /* Aseguramos que el texto sea blanco sobre la imagen */
+  transition: transform 0.3s;
+  height: 300px; /* Ajusta la altura para que sea más visible */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  z-index: 1;
+}
+
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+}
+.card-upn {
+  background-color: #003467;
+}
+
+.service-card h5 {
+  font-size: 70px;
+  font-family: 'Bebas Neue', sans-serif; /* Aplica la fuente Bebas Neue */
+  line-height: 1.1; /* Reduce el interlineado */
+
+}
+
+.service-card p {
+  font-size: 1rem;
+}
+  .service-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    text-align: center; /* Centra el texto horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    height: 100%; /* Asegura que el contenido ocupe toda la altura */
+  }
+
+  .service-card {
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    color: white;
+    transition: transform 0.3s;
+    height: 300px; /* Ajusta la altura para que sea más visible */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+  }
+
+    .service-card {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  color: white; /* Aseguramos que el texto sea blanco sobre la imagen */
+  transition: transform 0.3s;
+  height: 300px; /* Ajusta la altura para que sea más visible */
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  z-index: 1;
+}
+
+.carousel-inner .carousel-item {
+  transition: transform 0.6s ease;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #00000080;
+  border-radius: 50%;
+  padding: 10px;
+
+}
+
+/* Forzar ancho completo al contenedor y las tarjetas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .flip-card {
+    width: 90% !important;
+    max-width: 400px;
+    height: auto !important;
+    margin: 0 auto;
+  }
+}
+  </style>
+<body>
+    <!-- Navbar (Header) -->
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Logo.png.jpeg" alt="Logo">
+        Universidad Pedagogica Nacional
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a> <!-- Redirige a la página de inicio -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="participantes.html">Experiencias</a> <!-- Redirige a la página de participantes -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="experiencia.html">Participantes</a> <!-- Redirige a la página de experiencias -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="encuesta.html">Encuesta</a> <!-- Redirige a la página de experiencias -->
+                </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Hero / Banner -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content-left">
+      <h1>Experiencias </h1>
+    </div>
+    </section>
+
+
+
+<section id="experiencias" class="container py-5">
+  <h3 class="text-center mb-5 fw-bold text-uppercase">Profesores Participantes</h3>
+  <div class="row g-4">
+
+    <!-- Tarjeta con animación -->
+    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Nilson.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Nilson Valencia</h5>
+          <p class="card-text">Licenciado en Diseño Tecnológico.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalValencia">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/fabio.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Fabio Gonzales</h5>
+          <p class="card-text">Ingeniero mecanico Universidad Nacional.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalGonzales">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Carolina.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Leidy Carolina Arias</h5>
+          <p class="card-text">Licenciada en Diseño Tecnológico.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalCarolina">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Alejandro.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Alejandro Torres Gutierrez</h5>
+          <p class="card-text">Licenciado en Docencia del Diseño.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalTorres">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Merchan.PNG"  class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Carlos Alberto Merchan</h5>
+          <p class="card-text">Licenciado en Diseño Tecnológico.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalMerchan">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Marin.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Carlos Arturo Marin</h5>
+          <p class="card-text">Ingeniero de Sistemas</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalMarin">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Martin.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Jeisson Fabian Martín</h5>
+          <p class="card-text">Licenciatura en Ciencias.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalMartin">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/jesus.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Jesus David Pardo</h5>
+          <p class="card-text">Sociólogo.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalPardo">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Johan.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Johan Alexander Rincon</h5>
+          <p class="card-text">Ingeniero Mecánico.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalRincon">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Estupiñan.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Juan Carlos Estupiñan</h5>
+          <p class="card-text">Diseñador Industrial y Ergónomo.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalEstupinan">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Nelson.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Nelson Otalora Porras</h5>
+          <p class="card-text">Licenciado en docencia del diseño y magister.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalOtalora">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Aldana.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Yovanni Aldana Useche</h5>
+          <p class="card-text">Licenciado en Diseño Tecnológico.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalAldana">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="card card-upn h-100 shadow-lg border-0 rounded-4 text-white">
+        <img src="imagenes/Karen.PNG" class="card-img-top rounded-top-4" alt="Leidy Carolina Arias">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-semibold">Karen Melissa Muñoz</h5>
+          <p class="card-text">Licenciada en Idiomas Extranjeros.</p>
+          <button type="button" class="btn btn-light mt-auto rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#modalMunoz">
+            <i class="bi bi-chat-text"></i> Leer más
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+<!-- Modal Nilson Valencia -->
+<!-- Modal Alejandro Torres -->
+<div class="modal fade" id="modalValencia" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Nilson Valencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Licenciado en Diseño Tecnológico</li>
+          <li> Maestria en tecnologías de la información aplicadas a la educación</li>
+          <li>  Doctorado en la Universidad Pedagógica Nacional</li>
+        </ul>
+        <h6><strong> Trayectoria en Proyectos de Investigación:</strong></h6>
+        <p>Proyectos relacionados con la incorporación de tecnologías de la información en contextos educativos.</p>
+        <p>Estudios que analizan situaciones de aprendizaje y enseñanza integrando las TIC.</p>
+
+
+        <h6><strong>Área de Práctica Educativa:</strong></h6>
+        <ul>
+          <li>Análisis e implementación de materiales educativos,
+ tanto impresos como digitales, en el área de
+ tecnología, generando conocimiento a partir de su
+ aplicación.</li>
+
+        </ul>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:atorresg@pedagogica.edu.co">nvalencia@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/NILSON.mp4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Fabio Gonzales -->
+<div class="modal fade" id="modalGonzales" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Fabio Gonzales</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Ingeniero mecanico Universidad Nacional</li>
+          <li>Maestria en Tecnologías de la información aplicadas en la educación</li>
+          <li>Derecho</li>
+        </ul>
+        <h6><strong>Experiencia Profesional:</strong></h6>
+            <li>Trabajo en diseño de elementos eléctricos, como transformadores y motores.</li>
+            <li>Experiencia en herramientas de corte y transformación de materiales.</li>
+        <h6><strong>Líneas de Trabajo en Diseño de Producto:</strong></h6>
+        <ul>
+          <li>Diseño de productos como estrategia pedagógica,
+ creando recursos didácticos que faciliten la comprensión
+ de conceptos tecnológicos y motiven a los estudiantes en
+ el aula.</li>
+        </ul>
+        <h6><strong>Conocimientos:</strong></h6>
+        <p>Diseño de producto, resistencia de materiales y mecanismos.</p>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:fgonzalezr@pedagogica.edu.co">fgonzalezr@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/FABIO GONZALEZ RODRIGUEZ.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modalCarolina" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Carolina Arias Aguirre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li> Licenciada en Diseño Tecnológico</li>
+          <li> Especialista en Tecnologías de la Información y la Comunicación.</li>
+          <li>Maestría en Humanidades Digitales.</li>
+        </ul>
+        <h6><strong>Experiencia Profesional:</strong></h6>
+            <li>Gestión educativa y evaluación con enfoque en cómo las
+ culturas tradicionales se interrelacionan con la tecnología,
+ incluyendo proyectos de alfabetización tecnológica basados  
+en conocimientos ancestrales, como la cultura Wayúu.
+ Integración de la digiculturalidad en entornos virtuales de
+ aprendizaje, promoviendo la tecnología desde una
+ perspectiva culturalmente inclusiva.</li>
+        <h6><strong> <br>Dirección de Trabajos de Grado y Proyectos de Investigación:</strong></h6>
+        <ul>
+          <li>Asesoría en actividades tecnológicas escolares que buscan
+ alfabetizar a través del reconocimiento cultural y tradiciones
+ ancestrales.</li>
+           <li> Orientación de proyectos de gestión e investigación para
+ explorar diversas perspectivas en la enseñanza y aprendizaje
+ de tecnología.</li>
+
+        </ul>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:lcariasa@pedagogica.edu.coo">lcariasa@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/CAROLINA ARIAS.mp4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Alejandro Torres -->
+<!-- Modal Alejandro Torres -->
+<div class="modal fade" id="modalTorres" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Alejandro Torres Gutiérrez</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Licenciado en Docencia del Diseño</li>
+          <li>Maestría en Educación con Énfasis en Evaluación y Desarrollo Escolar</li>
+        </ul>
+        <h6><strong>Área de desempeño:</strong></h6>
+        <p>Pedagogía y enseñanza de la tecnología</p>
+        <h6><strong>Experiencia en Proyectos:</strong></h6>
+        <ul>
+          <li>Diseño curricular</li>
+          <li>Evaluación de aprendizajes</li>
+        </ul>
+        <h6><strong>Intereses Profesionales:</strong></h6>
+        <p>Desarrollo de actividades tecnológicas en el ámbito escolar</p>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:atorresg@pedagogica.edu.co">atorresg@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/ALEJANDRO TORRES GUTIERREZ.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Carlos Merchan -->
+<div class="modal fade" id="modalMerchan" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Carlos Alberto Merchan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Licenciado en Diseño Tecnológico</li>
+          <li> Maestria en Tecnologías de la información aplicadas en la educación</li>
+          <li>Doctorado en Educación</li>
+        </ul>
+        <h6><strong>Grupo de Investigación:</strong></h6>
+        <p>Episteme - Investigación, Cognición y Educación.</p>
+        <h6><strong>Líneas de Investigación</strong></h6>
+        <ul>
+          <li> Enfoque en aspectos epistemológicos y didácticos
+ aplicados en diversos grupos, desde niños hasta adultos.
+ Desarrollo de ambientes de aprendizaje y herramientas
+ que faciliten el aprendizaje en personas con movilidad
+ reducida.</li>
+          <li> Investigación y aplicación del lenguaje de señas como
+ herramienta educativa inclusiva.</li>
+          <li>  Participación en el ámbito de políticas relacionadas con
+ la tecnología y su enseñanza.</li>
+           <li>   Colaboración en la creación y difusión de recursos
+ educativos a nivel nacional.</li>
+        </ul>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:camerchan@pedagogica.edu.co">camerchan@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/CARLOS ALBERTO MERCHAN.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Carlos Marin -->
+<div class="modal fade" id="modalMarin" tabindex="-1" aria-labelledby="modalAlejandroTorresLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Carlos Marin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Ingeniero de Sistemas</li>
+        </ul>
+        <h6><strong>Experiencia Docente:</strong></h6>
+        <p>Enseñanza de asignaturas de informática y programación en distintos lenguajes.</p>
+        <h6><strong> Intereses Profesionales:</strong></h6>
+        <ul>
+          <li>Programación.</li>
+          <li>Robótica escolar aplicada.</li>
+          <li> Promoción de TIC y tecnologías aplicadas en la educación.</li>
+        </ul>
+        <h6><strong>Habilidades técnicas:</strong></h6>
+        <p> Manejo de cortadora láser e impresora 3D.</p>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="mailto:cdelgadillo@pedagogica.edu.co">cdelgadillo@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/CARLOS ARTURO MARIN.mp4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Jeisson Martín -->
+<div class="modal fade" id="modalMartin" tabindex="-1" aria-labelledby="modalMartinLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Jeisson MartínS</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Licenciatura en Ciencias.</li>
+          <li>Maestría en Enseñanza de las Ciencias Exactas y Naturales.</li>
+          <li> Doctorado en Enseñanza de las Ciencias (con énfasis en Física).</li>
+          <li> Doctorado en Educación.</li>
+        </ul>
+        <h6><strong>Proyectos Realizados:</strong></h6>
+        <p>Fisicoquímica de la atmósfera.</p>
+        <p>Óptica y comportamiento ondulatorio de la luz.</p>
+        <p>Holografía digital.</p>
+        <h6><strong>Temas de interés:</strong></h6>
+        <ul>
+          <li>Enseñanza de las ciencias en territorios e islas</li>
+          <li>Calidad en la educación superior.</li>
+          <li>Ciencia aplicada a la contaminación ambiental desde la pedagogía y la didáctica.</li>
+          <li>Reducción de brechas entre zonas rurales y urbanas en educación.
+</li>
+        </ul>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/JEISSON FABIAN MARTÍN.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Jesus Pardo -->
+<div class="modal fade" id="modalPardo" tabindex="-1" aria-labelledby="modalPardoLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAlejandroTorresLabel">Jesus David Pardo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <h6><strong>Formación Académica:</strong></h6>
+            <ul>
+              <li>Sociólogo.</li>
+              <li> Magíster en Educación.</li>
+              <li> Doctorado en Didáctica y Conciencia Histórica.</li>
+            </ul>
+            <h6><strong>Temas de investigación:</strong></h6>
+            <p> Investigación social aplicada a la educación. Educación y ámbito pedagógico..</p>
+            <p> Educación y ámbito pedagógico..</p>
+            <h6><strong> Áreas de interés:</strong></h6>
+            <ul>
+              <li> Factores sociales y capital cultural en el entorno académico.
+ Epistemología y condicionamientos en los modos de
+ aprendizaje y pensamiento.</li>
+            </ul>
+                        <h6><strong>Proyectos Realizados:</strong></h6>
+            <ul>
+              <li> Colaboraciones con UNESCO , Bibliored y la Secretaría de
+ Cultura en temas educativos.</li>
+              <li>  Consultor en Profamilia para programas educativos..</li>
+              <li>  Proyectos con la Secretaría de Educación y la Universidad
+ Nacional de Colombia en el ámbito educativo.</li>
+            </ul>
+
+                        <h6><strong> Experiencia en Metodologías de Investigación:</strong></h6>
+            <ul>
+              <li> Métodos cualitativos y uso de software para investigación
+ cualitativa.</li>
+            </ul>
+                        <ul>
+              <li> Metodologías mixtas para análisis y producción intelectual,
+ incluyendo estadística y teoría fundamentada.</li>
+            </ul>
+
+
+            <h6><strong>Contacto:</strong></h6>
+            <p><a href="mailto:jedpardom@upn.edu.co">jedpardom@upn.edu.co</a></p>
+            <h6><strong>Video:</strong></h6>
+            <div class="ratio ratio-16x9">
+              <iframe src="VIDEOS/JESUS DAVID PARDO.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal Johan Rincon -->
+<div class="modal fade" id="modalRincon" tabindex="-1" aria-labelledby="modalRinconLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Johan Rincon</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Ingeniero Mecánico.</li>
+          <li>Técnico en Mecánica Diésel y Mecánica Automotriz.</li>
+          <li>Estudios en Gerencia.</li>
+          <li>Maestría en Educación.</li>
+        </ul>
+        <h6><strong>Experiencia Profesional:</strong></h6>
+        <p>Modificación y adecuación de maquinaria.</p>
+        <p>Docencia en instituciones de formación en ingeniería.</p>
+        <h6><strong>Trabajos Guiados:</strong></h6>
+        <ul>
+          <li>Adecuación de equipos y maquinaria.</li>
+        </ul>
+        <h6><strong> Áreas de interés:</strong></h6>
+        <p> Integración de TIC en procesos de diseño y construcción.</p>
+        <p>  Innovación en el marco de la Cuarta Revolución
+ Industrial (4.0).</p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/JOHAN ALEXANDER RINCON.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Juan Estupiñán -->
+<div class="modal fade" id="modalEstupinan" tabindex="-1" aria-labelledby="modalEstupinanLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Juan Estupiñán</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Diseñador Industrial y Ergónomo.</li>
+          <li>Maestría en Ergonomía.</li>
+          <li> Estudios en Gestión de Diseño e Innovación.</li>
+        </ul>
+        <h6><strong>Experiencia Profesional:</strong></h6>
+        <p>Acompañamiento en proyectos educativos, incluyendo formación para profesores </p>
+        <p>Temas emergentes como biónica, diseño de alimentos y gestión en industrias creativas. </p>
+        <p> Mentor y tallerista en un colegio digital. </p>
+        <h6><strong>Enfoque en Acompañamiento de Trabajos de Grado:</strong></h6>
+        <ul>
+          <li>Orientación para que los estudiantes identifiquen sus
+ intereses futuros y definan factores diferenciales</li>
+        </ul>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="jestupinan@pedagogica.edu.co">jestupinan@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/JUAN CARLOS ESTUPIÑAN.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Nelson Otalora -->
+<div class="modal fade" id="modalOtalora" tabindex="-1" aria-labelledby="modalOtaloraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Nelson Otalora</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        </ul>
+        <h6><strong>Formación Academica:</strong></h6>
+          <li>Licenciado en docencia del diseño y magister.</li>
+        <ul>
+        </ul>
+        <h6><strong>Campos de conocimiento:</strong></h6>
+          <li>Educación en tecnología y educación con tecnología</li>
+        <ul>
+        </ul>
+        <h6><strong>Líneas de trabajo:</strong></h6>
+          <li>Pedagogía de la tecnología.</li>
+          <li>Desarrollo de material educativo.</li>
+          <li>Actividades tecnológicas escolares</li>
+          <li>Didáctica en tecnología.</li>
+        <ul>
+                  </ul>
+        <h6><strong>Innovación en Didáctica:</strong></h6>
+          <li>Aplicación de nuevos medios para la enseñanza en el área de tecnología.</li>
+        <ul>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="notalora@pedagogica.edu.co">notalora@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/NELSON OTALORA PORRAS.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Yovanni Aldana -->
+<div class="modal fade" id="modalAldana" tabindex="-1" aria-labelledby="modalAldanaLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Yovanni Aldana</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li> Licenciado en Diseño Tecnológico.</li>
+          <li> Especialización en Pedagogía.</li>
+          <li> Maestría en Educación.</li>
+          <li> Certificación en Modelado 3D.</li>
+        </ul>
+        <h6><strong>Áreas de Enfoque Profesional:</strong></h6>
+        <p>Desarrollo de proyectos industriales, incluyendo maquinaria y prototipos agrícolas.</p>
+        <p>Robótica educativa e inteligencia artificial aplicada a humanoides, con un enfoque en el concepto educativo.</p>
+        <p> Diseño y desarrollo de soluciones prácticas para entornos educativos y tecnológicos.</p>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="yaldana@pedagogica.edu.co">yaldana@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/YOVANNI ALDANA USECHE.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Karen Muñoz -->
+<div class="modal fade" id="modalMunoz" tabindex="-1" aria-labelledby="modalMunozLabel" aria-hidden="true">
+   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalAlejandroTorresLabel">Karen Muñoz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <h6><strong>Formación Académica:</strong></h6>
+        <ul>
+          <li>Licenciada en Idiomas Extranjeros de la Universidad.</li>
+          <li>Especializada en inglés y francés.</li>
+          <li>Lengua de Señas Colombianas.</li>
+          <li>Maestría en Tecnologías de la Información Aplicadas en la educación.</li>
+        </ul>
+        <h6><strong>Enfoques de interés:</strong></h6>
+        <p> Inglés.</p>
+        <p>Entornos de aprendizaje.</p>
+        <p>Temas de Lengua de Señas</p>
+        <h6><strong>Contacto:</strong></h6>
+        <p><a href="kmmunozs@pedagogica.edu.co">kmmunozs@pedagogica.edu.co</a></p>
+        <h6><strong>Video:</strong></h6>
+        <div class="ratio ratio-16x9">
+          <iframe src="VIDEOS/KAREN MELISSA MUÑOZ.MP4" title="Video de Alejandro Torres" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="terms-conditions bg-dark text-white py-3">
+  <div class="container text-center">
+    <p class="mb-0">© 2025 Todos los derechos reservados. <a href="/terminos-y-condiciones" class="text-white">Términos y Condiciones</a></p>
+  </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+  AOS.init();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
